@@ -1,6 +1,6 @@
 # README #
 
-How to capture using camera with Windows Form, And Write the picture.
+How to capture using camera with Windows Form, and write the picture.
 
 ### Sample of capture using WinForm and writing the picture ###
 
