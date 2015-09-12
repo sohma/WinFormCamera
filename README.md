@@ -1,8 +1,8 @@
 # README #
 
-How to capture using camera with Windows Form.
+How to capture using camera with Windows Form, And Write the picture.
 
-### Sample of capture using WinForm ###
+### Sample of capture using WinForm and writing the picture ###
 
 * You can capture using WinForm. But you can't preview.  
 * Version 0.0.1
