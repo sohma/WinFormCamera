@@ -176,6 +176,11 @@ Public Class Form1
         Dim bReturn As Boolean
         Dim s As CAPSTATUS
         bReturn = SendMessage(hHwnd, WM_CAP_GET_STATUS, Marshal.SizeOf(s), s)
+
+        ' Carete Graphic object. Bacause Paint Picture Box after Take a picture 
+        PictureBox1.Image = New Bitmap(PictureBox1.Width, PictureBox1.Height)
+        Gr = Graphics.FromImage(PictureBox1.Image)
+
         Debug.WriteLine(String.Format("Video Size {0} x {1}", s.uiImageWidth, s.uiImageHeight))
     End Sub
 
