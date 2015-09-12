@@ -6,6 +6,8 @@
     Dim intY As Integer     'マウスポインタY
     Dim intNewX As Integer  '新しいマウスポインタX
     Dim intNewY As Integer  '新しいマウスポインタY
+    Private cam As WebcamSnap 'カメラ
+
 
     Private Sub Form1_Load(ByVal sender As System.Object, _
         ByVal e As System.EventArgs) Handles MyBase.Load
@@ -14,7 +16,7 @@
 
         'グラフィックオブジェクトを作成します。
         Gr = Graphics.FromImage(PictureBox1.Image)
-
+        cam = New WebcamSnap
     End Sub
 
 
@@ -75,7 +77,6 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim cam = New WebcamSnap
         cam.TakePicture()
         PictureBox1.Refresh()
     End Sub
@@ -87,5 +88,9 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim OutputPath As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
         PictureBox1.Image.Save(OutputPath + "\\picture.jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        cam.StopPicture()
     End Sub
 End Class
