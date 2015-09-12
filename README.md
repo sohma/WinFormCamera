@@ -19,5 +19,5 @@ How to capture using camera with Windows Form.
 
 ### Who do I talk to? ###
 
-* Repo owner : N_Sohma
-* Contact : @N_Sohma
+* Repo owner : Sohma
+* Contact : @Sohma
