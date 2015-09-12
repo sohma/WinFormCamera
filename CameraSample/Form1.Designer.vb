@@ -25,13 +25,18 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnStop = New System.Windows.Forms.Button()
+        Me.lstDevices = New System.Windows.Forms.ListBox()
+        Me.btnStart = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnInfo = New System.Windows.Forms.Button()
+        Me.sfdImage = New System.Windows.Forms.SaveFileDialog()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(154, 412)
+        Me.Button1.Location = New System.Drawing.Point(39, 372)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
@@ -40,7 +45,7 @@ Partial Class Form1
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(110, 47)
+        Me.PictureBox1.Location = New System.Drawing.Point(154, 44)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(464, 335)
         Me.PictureBox1.TabIndex = 1
@@ -48,28 +53,68 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(382, 412)
+        Me.Button2.Location = New System.Drawing.Point(12, 401)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(103, 23)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "デスクトップに保存"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnStop
         '
-        Me.Button3.Location = New System.Drawing.Point(272, 412)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Stop"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnStop.Location = New System.Drawing.Point(251, 385)
+        Me.btnStop.Name = "btnStop"
+        Me.btnStop.Size = New System.Drawing.Size(75, 23)
+        Me.btnStop.TabIndex = 3
+        Me.btnStop.Text = "Stop"
+        Me.btnStop.UseVisualStyleBackColor = True
+        '
+        'lstDevices
+        '
+        Me.lstDevices.FormattingEnabled = True
+        Me.lstDevices.ItemHeight = 12
+        Me.lstDevices.Location = New System.Drawing.Point(0, 0)
+        Me.lstDevices.Name = "lstDevices"
+        Me.lstDevices.Size = New System.Drawing.Size(114, 148)
+        Me.lstDevices.TabIndex = 4
+        '
+        'btnStart
+        '
+        Me.btnStart.Location = New System.Drawing.Point(170, 385)
+        Me.btnStart.Name = "btnStart"
+        Me.btnStart.Size = New System.Drawing.Size(75, 23)
+        Me.btnStart.TabIndex = 5
+        Me.btnStart.Text = "Start"
+        Me.btnStart.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(332, 385)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(75, 23)
+        Me.btnSave.TabIndex = 6
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnInfo
+        '
+        Me.btnInfo.Location = New System.Drawing.Point(413, 385)
+        Me.btnInfo.Name = "btnInfo"
+        Me.btnInfo.Size = New System.Drawing.Size(75, 23)
+        Me.btnInfo.TabIndex = 7
+        Me.btnInfo.Text = "Info"
+        Me.btnInfo.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(649, 447)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnInfo)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.btnStart)
+        Me.Controls.Add(Me.lstDevices)
+        Me.Controls.Add(Me.btnStop)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
@@ -82,6 +127,11 @@ Partial Class Form1
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnStop As System.Windows.Forms.Button
+    Friend WithEvents lstDevices As System.Windows.Forms.ListBox
+    Friend WithEvents btnStart As System.Windows.Forms.Button
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents btnInfo As System.Windows.Forms.Button
+    Friend WithEvents sfdImage As System.Windows.Forms.SaveFileDialog
 
 End Class
