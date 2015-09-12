@@ -21,8 +21,8 @@ Public Class Form1
     Const WM_CAP_DRIVER_CONNECT As Integer = WM_CAP + 10
     Const WM_CAP_DRIVER_DISCONNECT As Integer = WM_CAP + 11
     Const WM_CAP_EDIT_COPY As Integer = WM_CAP + 30
-    Public Const WM_CAP_GET_STATUS As Integer = WM_CAP + 54
-    Public Const WM_CAP_DLG_VIDEOFORMAT As Integer = WM_CAP + 41
+    Const WM_CAP_GET_STATUS As Integer = WM_CAP + 54
+    Const WM_CAP_DLG_VIDEOFORMAT As Integer = WM_CAP + 41
     Const WM_CAP_SET_PREVIEW As Integer = WM_CAP + 50
     Const WM_CAP_SET_PREVIEWRATE As Integer = WM_CAP + 52
     Const WM_CAP_SET_SCALE As Integer = WM_CAP + 53
@@ -137,8 +137,8 @@ Public Class Form1
         Dim iWidth As Integer = PictureBox1.Width
 
         ' Open Preview window in picturebox
-        hHwnd = capCreateCaptureWindowA(DeviceID.ToString, WS_VISIBLE Or WS_CHILD, 0, 0, 1280, _
-            1024, PictureBox1.Handle.ToInt32, 0)
+        hHwnd = capCreateCaptureWindowA(DeviceID.ToString, WS_VISIBLE Or WS_CHILD, 0, 0, 640, _
+            480, PictureBox1.Handle.ToInt32, 0)
 
         ' Connect to device
         If SendMessage(hHwnd, WM_CAP_DRIVER_CONNECT, DeviceID, 0) Then
@@ -148,7 +148,7 @@ Public Class Form1
 
 
             'Set the preview rate in milliseconds
-            SendMessage(hHwnd, WM_CAP_SET_PREVIEWRATE, 66, 0)
+            SendMessage(hHwnd, WM_CAP_SET_PREVIEWRATE, 100, 0)
 
 
             'Start previewing the image from the camera
